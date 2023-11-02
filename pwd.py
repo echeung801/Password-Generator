@@ -20,15 +20,16 @@ for i in range(0, length): # for loop
     
     match whichArray: # switch case
         case 0: # letter case lowercase
-                add = ALPHABET[int((random.random() * 1000 + random.random())) % 26]
+                add = ALPHABET[int((random.random() * 1000 + random.random()%2 + random.random())) % 26]
         case 1: # letter case uppercase
-                add = (ALPHABET[int((random.random() * 1000 + random.random())) % 26]).upper()
+                add = (ALPHABET[int((random.random() * 1000 + random.random()%3 + random.random())) % 26]).upper()
                 
         case 2: # alphanumeric case
-                add = SYMBOLS[int((random.random() * 1000 + random.random())) % 7]
+                add = SYMBOLS[int((random.random() * 1000 + random.random()%4 + random.random())) % 7]
         
         case 3: # number case
-                add = NUMBERS[int((random.random() * 1000 + random.random())) % 10]
+                add = NUMBERS[int((random.random() * 1000 + random.random()%3 + random.random())) % 10]
+        
         
     string = string + add #concatenate string
 
